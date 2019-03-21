@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra ma quoc gia nuoc My</title>
+</head>
+<body>
+<h5>Kiem tra ma quoc gia nuoc My</h5>
+<button onclick="isCheckZipCode(prompt(' nhap zid code 5 phan tu dau - 4 phan tu '))">kiem tra</button>
+<script>
+    let regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    function isCheckZipCode(str) {
+        if(regexp.test(str)){
+            console.log('verify !');
+            return true ;
+        }
+        else{
+            console.log(' not verify !');
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
